@@ -16,6 +16,7 @@ public class giftServiceImpl implements giftService {
 
     @Override
     public ServerResponse addGift(Gift gift) {
+        gift.setGiftCount(0);
         giftMapper.insert(gift);
         return ServerResponse.success();
     }
@@ -24,6 +25,12 @@ public class giftServiceImpl implements giftService {
     public ServerResponse queryGiftList() {
         List<Gift> giftList = giftMapper.selectList(null);
             return ServerResponse.success(giftList);
+    }
+
+    @Override
+    public ServerResponse deleteGiftById(Integer giftId) {
+        giftMapper.deleteById(giftId);
+        return ServerResponse.success();
     }
 }
 

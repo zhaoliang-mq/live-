@@ -1,5 +1,7 @@
 package com.fh.gift.model;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 
 import java.math.BigDecimal;
@@ -8,6 +10,7 @@ import java.math.BigDecimal;
 @TableName("t_gift")
 public class Gift {
 
+    @TableId(type =  IdType.AUTO)
     private Integer giftId;
 
     private String  giftName;//礼物名称

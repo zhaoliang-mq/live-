@@ -7,4 +7,6 @@ public interface giftService {
     ServerResponse addGift(Gift gift);
 
     ServerResponse queryGiftList();
+
+    ServerResponse deleteGiftById(Integer giftId);
 }

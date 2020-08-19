@@ -20,6 +20,12 @@ public class giftController {
         return giftService.addGift(gift);
     }
 
+    //添加礼物
+    @RequestMapping("deleteGiftById")
+    public ServerResponse deleteGiftById(Integer giftId){
+        return giftService.deleteGiftById(giftId);
+    }
+
     //查询礼物数据礼物
     @RequestMapping("queryGiftList")
     public ServerResponse queryGiftList(){
