@@ -1,7 +1,6 @@
 package com.fh.gift.service;
 
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.fh.gift.common.ResponseCode;
+import com.fh.common.ServerResponse;
 import com.fh.gift.mapper.giftMapper;
 import com.fh.gift.model.Gift;
 import org.springframework.stereotype.Service;
@@ -16,15 +15,15 @@ public class giftServiceImpl implements giftService {
     private giftMapper giftMapper;
 
     @Override
-    public ResponseCode addGift(Gift gift) {
+    public ServerResponse addGift(Gift gift) {
         giftMapper.insert(gift);
-        return ResponseCode.success();
+        return ServerResponse.success();
     }
 
     @Override
-    public ResponseCode queryGiftList() {
+    public ServerResponse queryGiftList() {
         List<Gift> giftList = giftMapper.selectList(null);
-            return ResponseCode.success(giftList);
+            return ServerResponse.success(giftList);
     }
 }
 

@@ -1,10 +1,10 @@
 package com.fh.gift.service;
 
-import com.fh.gift.common.ResponseCode;
+import com.fh.common.ServerResponse;
 import com.fh.gift.model.Gift;
 
 public interface giftService {
-    ResponseCode addGift(Gift gift);
+    ServerResponse addGift(Gift gift);
 
-    ResponseCode queryGiftList();
+    ServerResponse queryGiftList();
 }

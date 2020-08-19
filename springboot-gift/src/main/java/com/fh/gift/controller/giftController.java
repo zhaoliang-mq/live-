@@ -1,6 +1,6 @@
 package com.fh.gift.controller;
 
-import com.fh.gift.common.ResponseCode;
+import com.fh.common.ServerResponse;
 import com.fh.gift.model.Gift;
 import com.fh.gift.service.giftService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,13 +16,13 @@ public class giftController {
 
     //添加礼物
     @RequestMapping("addGift")
-    public ResponseCode addGift(Gift gift){
+    public ServerResponse addGift(Gift gift){
         return giftService.addGift(gift);
     }
 
     //查询礼物数据礼物
     @RequestMapping("queryGiftList")
-    public ResponseCode queryGiftList(){
+    public ServerResponse queryGiftList(){
         return giftService.queryGiftList();
     }
 }
